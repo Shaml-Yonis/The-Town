@@ -1,0 +1,488 @@
+/* global rules */
+body{
+    font-family: "Roboto", sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding: 200px;
+}
+:root{
+    --blue-color: #2196f3;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+/* s-nav */
+nav{
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+nav > section{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav > section > .logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:1260px) {
+    nav > section > .logo{
+        width: 100%;
+    }
+}
+nav > section > .links{
+    width: 45%;
+    height: 100%;
+}
+@media (max-width:1260px) {
+nav > section > .links{
+    display: none;
+}
+}
+nav > section > .logo h1{
+    font-size: 40px;
+    color: white;
+    font-weight: 600; 
+}
+nav > section > .links > .a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav > section > .links > .a > a{
+    font-size: 25px;
+    color: white;
+    padding: 5px 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+nav > section > .links > .a > a:hover{
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+/* s-nav2 */
+.nav-2{
+    color: black;
+    margin-top: 70px;
+    height: 70px;
+    display: none;
+    width: 100%;
+    z-index: 5;
+}
+
+@media (max-width:1260px) {
+    .nav-2{
+        display: block;
+        background-color: transparent;
+        position: absolute;
+    }
+}
+.nav-2 > .a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.nav-2 > .a > a{
+    font-size: 20px;
+    color: white;
+    padding: 5px 0;
+    font-weight: 500;
+}
+.nav-2 > .a > a:hover{
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+/* e-nav2 */
+/* s-landing */
+.landing{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/landing-background.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.landing > .title{
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+.landing > .title > h1{
+    font-size: 80px;
+    max-width: 80%;
+    margin: auto;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+@media (max-width:768px) {
+    .landing > .title > h1{
+        font-size: 100px;
+    }
+}
+@media (max-width:520px) {
+    .landing > .title > h1{
+        font-size: 80px;
+    }
+}
+.landing > .title > h4{
+    font-size: 40px;
+    max-width: 80%;
+    margin: auto;
+    font-weight: 200;
+    letter-spacing: 5px;
+}
+@media (max-width:768px) {
+    .landing > .title > h4{
+        font-size: 50px;
+    }
+}
+@media (max-width:520px) {
+    .landing > .title > h4{
+        font-size: 35px;
+    }
+}
+.landing > .icon {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+}
+@media (max-width:768px) {
+    .landing > .icon {
+        width: 90px;
+        height: 90px;
+        border-radius: 45px;
+    }
+}
+.landing > .icon .trinagle{
+    font-size: 80px;
+}
+@media (max-width:768px) {
+    .landing > .icon .trinagle{
+        font-size: 80px;
+    }
+}
+/* e-landing */
+/* content */
+.content{
+    width: 100%;
+    min-height: 2000px;
+    background-color: #eee;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.content > section{
+    width: 90%;
+    height: 95%;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+.content > section .load{
+    width: 280px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:  translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.content > section .load span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+}
+.content > section .load span:first-of-type{
+    background-color: var(--blue-color);
+}
+/* s-introduction */
+.content > section > .introduction{
+    width: 100%;
+    height: 60%;
+}
+.content > section > .introduction > .title{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.content > section > .introduction > .title img{
+    width: 48%;
+    height: 100%;
+}
+
+@media (max-width:1200px) {
+    .content > section > .introduction > .title img{
+        display: none;
+    }
+}
+.content > section > .introduction > .title > .text{
+    width: 48%;
+    position: relative;
+}
+@media (max-width:1200px) {
+    .content > section > .introduction > .title > .text{
+        width: 100%;
+        text-align: center;
+    }
+}
+.content > section > .introduction > .title > .text > h1{
+    color: var(--blue-color);
+    font-weight: 400;
+    font-size: 50px;
+}
+.content > section > .introduction > .title > .text > p{
+    color: rgba(128, 128, 128, 0.699);
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.content > section > .introduction > .title > .text > p:first-of-type{
+    margin-bottom: 50px;
+
+}
+.content > section > .introduction > .title > .text > .btn{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+}
+@media (max-width:1200px) {
+    .content > section > .introduction > .title > .text > .btn{
+        justify-content: center;
+        height: 30%;
+    }
+    
+}
+.content > section > .introduction > .title > .text > .btn >button{
+    color: white;
+    background-color: var(--blue-color);
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.content > section > .introduction > .properties{
+    height: calc(50% - 10px);
+    width: 100%;
+    display: grid;
+    margin-top: 30px;
+    column-gap: 20px;
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    margin-top: 100px;
+}
+
+@media (max-width:768px) {
+    .content > section > .introduction > .properties{
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    }
+}
+.content > section > .introduction > .properties i{
+    color: var(--blue-color);
+    font-size: 100px;
+    margin: auto;
+    width: fit-content;
+    display: block;
+    height: 30%;
+}
+.content > section > .introduction > .properties h1{
+    color: var(--blue-color);
+    text-transform: capitalize;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 40px;
+    height: 10%;
+}
+.content > section > .introduction > .properties p{
+    color: rgba(128, 128, 128, 0.699);
+    text-align: center;
+    height: 60%;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    line-height: 60px;
+    max-width: 100%;
+}
+.content > section > .introduction > .properties > div{
+    padding-bottom: 40px;
+    padding-top: 50px;
+    max-width: 100%;
+    margin-top: 20px;
+}
+/* e-introduction */
+/* s-our-work */
+.content > section > .our-work{
+    width: 100%;
+    height: 40%;
+    padding-top: 50px;
+}
+.content > section > .our-work > h1{
+    text-align: center;
+    color: var(--blue-color);
+    font-weight: 400;
+    font-size: 70px;
+}
+.content > section > .our-work > p{
+    color: rgba(128, 128, 128, 0.699);
+    text-align: center;
+    font-size: 20px;
+    min-width: 50%;
+    max-width: 80%;
+    margin: auto;
+    line-height: 50px;
+}
+/* e-our-work */
+/* s-contact-us */
+.contact-us{
+    width: 100%;
+    height: 900px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/landing-background.jpg);
+    background-size: cover;
+}
+.contact-us > section{
+    width: 70%;
+    height: 70%;
+}
+.contact-us > section > h1{
+    font-size: 50px;
+    font-weight: 400;
+    color: white;
+    width: 100%;
+    height: 8%;
+}
+.contact-us > section > hr{
+    background-color: white;
+    height: 1%;
+    border: none;
+}
+.contact-us > section > hr:nth-of-type(2){
+    width: 30%;
+    height: 2%;
+}
+.contact-us > section > p{
+    font-size: 25px;
+    color: white;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+.contact-us > section > .information{
+    width: 80%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-us > section > .information > .phone,
+.contact-us > section > .information > .email{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    color: white;
+}
+.contact-us > section i,
+.contact-us > section i{
+    font-size: 50px;
+    color: white;
+}
+.contact-us > section   h4,
+.contact-us > section   h4{
+    font-size: 30px;
+    color: white;
+}
+.contact-us > section > .send{
+    width: 100%;
+    height: 23.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-us > section > .send > .map{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+
+}
+.contact-us > section > .send > .button{
+    width: 42%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-us > section > .send > .button > input{
+    width: 60%;
+    height: 50%;
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: transparent;
+    z-index: 3;
+    color: white;
+    border: 2px solid white;
+}
+.contact-us > section > .send > .button > input::placeholder{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-transform: capitalize;
+}
+.contact-us > section > .send > .button > button{
+    width: 30%;
+    height: 50%;
+    color: black;
+    background-color: white;
+    border-color: transparent;
+    border-radius: 15px;
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+/* e-contact-us */
+/* 41 */
